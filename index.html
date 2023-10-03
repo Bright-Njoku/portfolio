@@ -46,12 +46,14 @@
             right: 20px;
             width: 100px;
             height: 100px;
+            animation: rotateGlobe 10s linear infinite;
         }
 
         /* Introduction (About) */
         .about {
             padding: 2rem;
             text-align: center;
+            animation: fadeIn 2s ease;
         }
 
         .about h2 {
@@ -69,6 +71,7 @@
             background-color: #E74C3C; /* Red Background */
             padding: 2rem;
             text-align: center;
+            animation: slideUp 2s ease;
         }
 
         .skills h2 {
@@ -85,18 +88,22 @@
         .skills li {
             margin: 0.5rem 0;
             color: #fff; /* White Text */
+            opacity: 0;
+            animation: fadeIn 2s ease;
+            animation-delay: 0.5s;
         }
 
         /* Contact Button */
         .contact-button {
             text-align: center;
             margin-top: 1rem;
+            animation: breathe 2s infinite alternate; /* Breathing Animation */
         }
 
         .contact-button a {
             display: inline-block;
-            background-color: #E74C3C; /* Red Button */
-            color: #fff;
+            background-color: #4CAF50; /* Light Green Button */
+            color: #fff; /* White Text */
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
@@ -110,13 +117,50 @@
             text-align: center;
             padding: 1rem 0;
         }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotateGlobe {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes breathe {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <!-- Rotating Globe -->
         <div id="globe-container">
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F13544-earth-png-image&psig=AOvVaw191fFpxzbjbJ4KtEERpZsU&ust=1696419745841000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMjD8JTm2YEDFQAAAAAdAAAAABAJ" alt="Rotating Globe">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F13544-earth-png-image&psig=AOvVaw191fFpxzbjbJ4KtEERpZsU&ust=1696419745841000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqFwoTCMjD8JTm2YEDFQAAAAAdAAAAABAJ" alt="Rotating Globe">
         </div>
         <h1>Bright Njoku</h1>
         <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
