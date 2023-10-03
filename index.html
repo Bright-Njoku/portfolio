@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bright Njoku - Software Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/font-awesome.min.css">
     <style>
         /* Reset some default styles */
         * {
@@ -48,11 +49,11 @@
             height: 100px;
         }
 
-        /* WhatsApp Button */
+        /* WhatsApp Button with Icon */
         .contact-button {
             position: absolute;
-            top: 110px; /* Adjust the position as needed */
-            right: 20px;
+            left: 20px; /* Adjust the left value for horizontal positioning */
+            top: 120px; /* Adjust the top value for vertical positioning */
             background-color: #008000; /* Green Background for Button */
             padding: 5px 10px;
             border-radius: 5px;
@@ -125,6 +126,11 @@
             color: #fff; /* White Text on Progress Bar */
         }
 
+        /* Adjust Django REST Framework progress */
+        .django-rest-framework .progress {
+            width: 70%; /* Adjust the width for the desired progress */
+        }
+
         /* Buy Me a Coffee Section */
         .buy-coffee {
             background-color: #F8F8F8; /* Light Gray Background */
@@ -176,14 +182,16 @@
         <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
-    <!-- WhatsApp Button -->
+    <!-- WhatsApp Button with Icon -->
     <div class="contact-button">
-        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">Contact Me on WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
+            <i class="fa fa-whatsapp"></i> Contact Me on WhatsApp
+        </a>
     </div>
 
     <div class="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Bright Njoku, a graduate of Nnamdi Azikiwe university and a native of Port Harcourt. I'm a passionate software developer skilled and certified in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
+        <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
     </div>
 
     <div class="skills">
@@ -206,8 +214,8 @@
         <div class="skill-pair">
             <div class="skill">
                 <div class="skill-name">Django REST Framework</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;">70%</div>
+                <div class="progress-bar django-rest-framework">
+                    <div class="progress" style="width: 70%;">70%</div>
                 </div>
             </div>
             <div class="skill">
@@ -221,13 +229,13 @@
             <div class="skill">
                 <div class="skill-name">HTML</div>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 100%;">99%</div>
+                    <div class="progress" style="width: 100%;">100%</div>
                 </div>
             </div>
             <div class="skill">
                 <div class="skill-name">CSS</div>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 100%;">95%</div>
+                    <div class="progress" style="width: 100%;">100%</div>
                 </div>
             </div>
         </div>
@@ -237,8 +245,10 @@
     <!-- Buy Me a Coffee Section -->
     <div class="buy-coffee">
         <h2>Buy Me a Coffee</h2>
-        <p>If you find my work helpful, consider buying me a coffee;) !</p>
-        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">Buy Me a Coffee on WhatsApp</a>
+        <p>If you find my work helpful, consider buying me a coffee!</p>
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
+            <i class="fa fa-coffee"></i> Buy Me a Coffee on WhatsApp
+        </a>
     </div>
 
     <footer>
