@@ -34,6 +34,20 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        /* Stylish underline for the first title */
+        header h1::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #E74C3C; /* Red Underline Color */
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         header p {
