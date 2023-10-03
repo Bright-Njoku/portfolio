@@ -34,19 +34,6 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            position: relative;
-        }
-
-        /* Stylish underline for the first title */
-        header h1::after {
-            content: "";
-            display: block;
-            width: 70px; /* Longer underline */
-            height: 2px;
-            background-color: #E74C3C; /* Pink Underline Color */
-            position: absolute;
-            bottom: -10px;
-            left: calc(50% - 35px); /* Centered underline */
         }
 
         header p {
@@ -89,20 +76,6 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: #E74C3C; /* Red Text */
-            position: relative;
-        }
-
-        /* Stylish underline for section headings */
-        .about h2::after {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 2px;
-            background-color: #E74C3C; /* Red Underline Color */
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         .about p {
@@ -119,7 +92,7 @@
         .skills h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            position: relative;
+            color: #E74C3C; /* Red Text */
         }
 
         /* Stylish underline for section headings */
@@ -226,7 +199,62 @@
         <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
     </div>
 
-    <!-- ... (Rest of your content) ... -->
+    <!-- Skills Section -->
+    <div class="skills">
+        <h2>Skills</h2>
+        <div class="skill-pair">
+            <div class="skill">
+                <p class="skill-name">Python</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p class="skill-name">Django</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-pair">
+            <div class="skill">
+                <p class="skill-name">Django REST Framework</p>
+                <div class="progress-bar django-rest-framework">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p class="skill-name">AWS</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-pair">
+            <div class="skill">
+                <p class="skill-name">HTML</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p class="skill-name">CSS</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy Me a Coffee Section -->
+    <div class="buy-coffee">
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank" style="background-color: teal; padding: 10px 20px; border-radius: 10px; color: white; text-decoration: none;">Contact Me on WhatsApp</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Bright Njoku. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
