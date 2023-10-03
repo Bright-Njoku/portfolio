@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bright Njoku - Software Developer</title>
     <style>
-        /* Add your CSS styles here */
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f4f4;
@@ -13,92 +19,96 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
         }
 
+        /* Header */
         header {
+            background-color: #2E86C1;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Rotating Globe */
+        #globe-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Introduction */
+        .introduction {
+            padding: 2rem;
             text-align: center;
         }
 
-        #globe-container {
-            width: 200px;
-            height: 200px;
+        .introduction h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
-        #contact-button {
-            margin-top: 20px;
+        .introduction p {
+            font-size: 1.2rem;
+        }
+
+        /* Contact Button */
+        .contact-button {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .contact-button a {
+            display: inline-block;
             background-color: #2E86C1;
             color: #fff;
             padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
         }
     </style>
 </head>
 <body>
     <header>
+        <!-- Rotating Globe -->
+        <div id="globe-container">
+            <img src="C:\Users\user\Pictures\5-2-earth-png-image.png" alt="Rotating Globe">
+        </div>
         <h1>Bright Njoku</h1>
-        <p>Software Developer | Python | Django | Django REST Framework | Azure | AWS</p>
+        <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
-    <section id="about">
+    <div class="introduction">
         <h2>About Me</h2>
-        <p>Hello! I'm Bright Njoku, and I'm passionate about creating technical solutions. I have expertise in Python, Django, Django REST Framework, Azure, and AWS. Let's build the future together!</p>
-    </section>
+        <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
+    </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <!-- Add your project descriptions and links here -->
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-        </div>
-        <!-- Add more projects here -->
-    </section>
+    <div class="contact-button">
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">Contact Me on WhatsApp</a>
+    </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <!-- Add your contact information here -->
-        <a href="https://api.whatsapp.com/send?phone=2347065573975" id="contact-button">Contact Me on WhatsApp</a>
-    </section>
-
-    <div id="globe-container"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-    <script>
-        // JavaScript code for rotating globe
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(200, 200); // Adjust the size as needed
-        document.getElementById('globe-container').appendChild(renderer.domElement);
-
-        var geometry = new THREE.SphereGeometry(1, 32, 32);
-        var texture = new THREE.TextureLoader().load('rotating-globe-movie-still-image-4x3-1');
-        var material = new THREE.MeshBasicMaterial({ map: texture });
-        var globe = new THREE.Mesh(geometry, material);
-        scene.add(globe);
-
-        camera.position.z = 5;
-
-        var animate = function () {
-            requestAnimationFrame(animate);
-            globe.rotation.x += 0.001;
-            globe.rotation.y += 0.001;
-            renderer.render(scene, camera);
-        };
-
-        animate();
-    </script>
+    <footer>
+        &copy; 2023 Bright Njoku - Software Developer
+    </footer>
 </body>
 </html>
