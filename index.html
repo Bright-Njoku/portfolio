@@ -78,30 +78,27 @@
         }
 
         .skill {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             margin-bottom: 1rem;
         }
 
         .skill-name {
             font-size: 1.2rem;
-            flex: 1;
-            text-align: left;
+            margin-bottom: 0.5rem;
         }
 
         .progress-bar {
-            flex: 2;
+            width: 70%; /* Adjust the width as needed for each skill */
             height: 20px;
-            background-color: #ccc; /* Grey Background for Progress Bar */
+            background-color: #FF69B4; /* Pink Background for Progress Bar */
             border-radius: 10px;
             overflow: hidden;
+            display: inline-block;
         }
 
         .progress {
             height: 100%;
-            width: 99%; /* Adjust the width as needed for each skill */
-            background-color: #4CAF50; /* Light Green Progress */
+            width: 100%; /* Full width for progress bar */
+            background-color: #4CAF50; /* Lighter Green Progress */
             text-align: right;
             line-height: 20px;
             color: #fff; /* White Text on Progress Bar */
@@ -175,13 +172,13 @@
         <div class="skill">
             <div class="skill-name">HTML</div>
             <div class="progress-bar">
-                <div class="progress" style="width: 100%;">100%</div>
+                <div class="progress">100%</div>
             </div>
         </div>
         <div class="skill">
             <div class="skill-name">CSS</div>
             <div class="progress-bar">
-                <div class="progress" style="width: 100%;">100%</div>
+                <div class="progress">100%</div>
             </div>
         </div>
         <!-- Add more skills here -->
