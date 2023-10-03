@@ -75,6 +75,20 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: #E74C3C; /* Red Text */
+            position: relative;
+        }
+
+        /* Stylish underline for section headings */
+        .about h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #E74C3C; /* Red Underline Color */
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .about p {
@@ -91,6 +105,20 @@
         .skills h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
+            position: relative;
+        }
+
+        /* Stylish underline for section headings */
+        .skills h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #66FF00; /* Green Underline Color */
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         /* Arrange skills horizontally in pairs */
