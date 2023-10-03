@@ -49,6 +49,21 @@
             height: 100px;
         }
 
+        /* WhatsApp Button with Icon */
+        .contact-button {
+            text-align: center;
+        }
+
+        .contact-button a {
+            display: inline-block;
+            font-size: 1.4rem;
+            background-color: #008000; /* Green Background for Button */
+            padding: 8px 16px; /* Adjust padding for button size */
+            border-radius: 15px; /* Add border-radius for a slight curve */
+            text-decoration: none;
+            color: #fff; /* White Text on Button */
+        }
+
         /* Introduction (About) */
         .about {
             padding: 2rem;
@@ -60,6 +75,20 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: #E74C3C; /* Red Text */
+            position: relative;
+        }
+
+        /* Stylish underline for section headings */
+        .about h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #E74C3C; /* Red Underline Color */
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .about p {
@@ -76,7 +105,7 @@
         .skills h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #E74C3C; /* Red Text */
+            position: relative;
         }
 
         /* Stylish underline for section headings */
@@ -127,10 +156,10 @@
 
         /* Adjust Django REST Framework progress */
         .django-rest-framework .progress {
-            width: 60%; /* Adjust the width for the desired progress */
+            width: 70%; /* Adjust the width for the desired progress */
         }
 
-        /* Buy Me a Coffee Section */
+        /* Centered Buy Me a Coffee Section */
         .buy-coffee {
             text-align: center;
             padding: 2rem;
@@ -170,53 +199,77 @@
         <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
+    <!-- WhatsApp Button with Icon -->
+    <div class="contact-button">
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
+            <i class="fa fa-whatsapp" style="font-size: 1.8rem;"></i> Contact Me on WhatsApp
+        </a>
+    </div>
+
     <div class="about">
         <h2>About Me</h2>
         <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
     </div>
 
-    <!-- Skills Section -->
     <div class="skills">
         <h2>Skills</h2>
+        <!-- Arrange skills horizontally in pairs -->
         <div class="skill-pair">
             <div class="skill">
-                <p class="skill-name">Python</p>
+                <div class="skill-name">Python</div>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 85%;"></div>
+                    <div class="progress" style="width: 85%;">85%</div>
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-name">Django</p>
+                <div class="skill-name">Django</div>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 80%;"></div>
+                    <div class="progress" style="width: 80%;">80%</div>
                 </div>
             </div>
         </div>
         <div class="skill-pair">
             <div class="skill">
-                <p class="skill-name">Django REST Framework</p>
+                <div class="skill-name">Django REST Framework</div>
                 <div class="progress-bar django-rest-framework">
-                    <div class="progress" style="width: 70%;"></div>
+                    <div class="progress" style="width: 70%;">70%</div>
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-name">AWS</p>
+                <div class="skill-name">AWS</div>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 70%;"></div>
+                    <div class="progress" style="width: 70%;">70%</div>
                 </div>
             </div>
         </div>
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more skills here -->
     </div>
 
-    <!-- Buy Me a Coffee Section -->
+    <!-- Centered Buy Me a Coffee Section -->
     <div class="buy-coffee">
-        <a href="https://www.buymeacoffee.com/yourlink" target="_blank" style="background-color: #FF0000; padding: 10px 20px; border-radius: 10px; color: #fff; text-decoration: none;">Buy Me a Coffee</a>
+        <h2 style="color: #E74C3C;">Buy Me a Coffee</h2>
+        <p>If you find my work helpful, consider buying me a coffee!</p>
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
+            <i class="fa fa-coffee" style="font-size: 1.8rem;"></i> Buy Me a Coffee on WhatsApp
+        </a>
     </div>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Bright Njoku. All Rights Reserved.</p>
+        &copy; 2023 Bright Njoku - Software Developer
     </footer>
-
 </body>
 </html>
