@@ -14,8 +14,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #15202B; /* Dark Blue Background */
+            color: #fff; /* White Text */
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -23,7 +23,7 @@
 
         /* Header */
         header {
-            background-color: #2E86C1;
+            background-color: #2E86C1; /* Dark Blue Header */
             color: #fff;
             text-align: center;
             padding: 2rem 0;
@@ -48,19 +48,43 @@
             height: 100px;
         }
 
-        /* Introduction */
-        .introduction {
+        /* Introduction (About) */
+        .about {
             padding: 2rem;
             text-align: center;
         }
 
-        .introduction h2 {
+        .about h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
+            color: #E74C3C; /* Red Text */
         }
 
-        .introduction p {
+        .about p {
             font-size: 1.2rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #E74C3C; /* Red Background */
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff; /* White Text */
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            margin: 0.5rem 0;
+            color: #fff; /* White Text */
         }
 
         /* Contact Button */
@@ -71,7 +95,7 @@
 
         .contact-button a {
             display: inline-block;
-            background-color: #2E86C1;
+            background-color: #E74C3C; /* Red Button */
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -81,7 +105,7 @@
 
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #15202B; /* Dark Blue Footer */
             color: #fff;
             text-align: center;
             padding: 1rem 0;
@@ -92,15 +116,26 @@
     <header>
         <!-- Rotating Globe -->
         <div id="globe-container">
-            <img src="C:\Users\user\Pictures\5-2-earth-png-image.png" alt="Rotating Globe">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F13544-earth-png-image&psig=AOvVaw191fFpxzbjbJ4KtEERpZsU&ust=1696419745841000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMjD8JTm2YEDFQAAAAAdAAAAABAJ" alt="Rotating Globe">
         </div>
         <h1>Bright Njoku</h1>
         <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
-    <div class="introduction">
+    <div class="about">
         <h2>About Me</h2>
         <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
+    </div>
+
+    <div class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>Django</li>
+            <li>Django REST Framework</li>
+            <li>AWS</li>
+            <!-- Add more skills here -->
+        </ul>
     </div>
 
     <div class="contact-button">
