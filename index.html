@@ -67,54 +67,22 @@
 
         /* Skills Section */
         .skills {
-            background-color: #FF69B4; /* Pink Background */
             padding: 2rem;
             text-align: center;
-            animation: slideUp 2s ease;
+            animation: breathe 4s infinite alternate; /* Breathing Animation */
         }
 
         .skills h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #fff; /* White Text */
         }
 
-        .skills ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills li {
-            margin: 0.5rem 0;
-            color: #000; /* Black Text */
-            opacity: 1;
-            animation: fadeIn 2s ease;
-            animation-delay: 0.5s;
-        }
-
-        /* Contact Button */
-        .contact-button {
-            text-align: center;
-            margin-top: 1rem;
-            animation: breathe 2s infinite alternate; /* Breathing Animation */
-        }
-
-        .contact-button a {
+        .animated-box {
             display: inline-block;
-            background-color: #4CAF50; /* Light Green Button */
-            color: #fff; /* White Text */
-            padding: 10px 20px;
-            text-decoration: none;
+            padding: 0.5rem 1rem;
             border-radius: 5px;
             font-size: 1.2rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #fff; /* White Footer */
-            color: #000; /* Black Text */
-            text-align: center;
-            padding: 1rem 0;
+            animation: changeColor 4s infinite alternate; /* Color Changing Animation */
         }
 
         /* Keyframe animations */
@@ -127,30 +95,23 @@
             }
         }
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes rotateGlobe {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
         @keyframes breathe {
-            0% {
+            0%, 100% {
                 transform: scale(1);
             }
-            100% {
+            50% {
                 transform: scale(1.1);
+            }
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-color: #FF69B4; /* Pink */
+                color: #fff; /* White Text */
+            }
+            100% {
+                background-color: #fff; /* White */
+                color: #000; /* Black Text */
             }
         }
     </style>
@@ -176,15 +137,11 @@
 
     <div class="skills">
         <h2>Skills</h2>
-        <div class="animated-box">
-            <ul>
-                <li>Python</li>
-                <li>Django</li>
-                <li>Django REST Framework</li>
-                <li>AWS</li>
-                <!-- Add more skills here -->
-            </ul>
-        </div>
+        <div class="animated-box">Python</div>
+        <div class="animated-box">Django</div>
+        <div class="animated-box">Django REST Framework</div>
+        <div class="animated-box">AWS</div>
+        <!-- Add more skills here -->
     </div>
 
     <div class="contact-button">
