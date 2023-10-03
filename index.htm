@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Njoku - Software Developer</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #globe-container {
+            width: 200px;
+            height: 200px;
+        }
+
+        #contact-button {
+            margin-top: 20px;
+            background-color: #2E86C1;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bright Njoku</h1>
+        <p>Software Developer | Python | Django | Django REST Framework | Azure | AWS</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Bright Njoku, and I'm passionate about creating technical solutions. I have expertise in Python, Django, Django REST Framework, Azure, and AWS. Let's build the future together!</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <!-- Add your project descriptions and links here -->
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+        </div>
+        <!-- Add more projects here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <!-- Add your contact information here -->
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" id="contact-button">Contact Me on WhatsApp</a>
+    </section>
+
+    <div id="globe-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script>
+        // JavaScript code for rotating globe
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(200, 200); // Adjust the size as needed
+        document.getElementById('globe-container').appendChild(renderer.domElement);
+
+        var geometry = new THREE.SphereGeometry(1, 32, 32);
+        var texture = new THREE.TextureLoader().load('rotating-globe-movie-still-image-4x3-1');
+        var material = new THREE.MeshBasicMaterial({ map: texture });
+        var globe = new THREE.Mesh(geometry, material);
+        scene.add(globe);
+
+        camera.position.z = 5;
+
+        var animate = function () {
+            requestAnimationFrame(animate);
+            globe.rotation.x += 0.001;
+            globe.rotation.y += 0.001;
+            renderer.render(scene, camera);
+        };
+
+        animate();
+    </script>
+</body>
+</html>
