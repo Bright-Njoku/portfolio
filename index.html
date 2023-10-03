@@ -77,12 +77,34 @@
             margin-bottom: 1rem;
         }
 
-        .animated-box {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+        .skill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
             font-size: 1.2rem;
-            animation: changeColor 4s infinite alternate; /* Color Changing Animation */
+            flex: 1;
+            text-align: left;
+        }
+
+        .progress-bar {
+            flex: 2;
+            height: 20px;
+            background-color: #ccc; /* Grey Background for Progress Bar */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 99%; /* Adjust the width as needed for each skill */
+            background-color: #4CAF50; /* Light Green Progress */
+            text-align: right;
+            line-height: 20px;
+            color: #fff; /* White Text on Progress Bar */
         }
 
         /* Keyframe animations */
@@ -101,17 +123,6 @@
             }
             50% {
                 transform: scale(1.1);
-            }
-        }
-
-        @keyframes changeColor {
-            0% {
-                background-color: #FF69B4; /* Pink */
-                color: #fff; /* White Text */
-            }
-            100% {
-                background-color: #fff; /* White */
-                color: #000; /* Black Text */
             }
         }
     </style>
@@ -137,10 +148,42 @@
 
     <div class="skills">
         <h2>Skills</h2>
-        <div class="animated-box">Python</div>
-        <div class="animated-box">Django</div>
-        <div class="animated-box">Django REST Framework</div>
-        <div class="animated-box">AWS</div>
+        <div class="skill">
+            <div class="skill-name">Python</div>
+            <div class="progress-bar">
+                <div class="progress">99%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Django</div>
+            <div class="progress-bar">
+                <div class="progress">99%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Django REST Framework</div>
+            <div class="progress-bar">
+                <div class="progress">99%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">AWS</div>
+            <div class="progress-bar">
+                <div class="progress">99%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%;">100%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%;">100%</div>
+            </div>
+        </div>
         <!-- Add more skills here -->
     </div>
 
