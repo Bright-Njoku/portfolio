@@ -51,9 +51,9 @@
         /* WhatsApp Button */
         .contact-button {
             position: absolute;
-            top: 140px;
+            top: 110px; /* Adjust the position as needed */
             right: 20px;
-            background-color: #008080; /* Teal Green Background for Button */
+            background-color: #008000; /* Green Background for Button */
             padding: 5px 10px;
             border-radius: 5px;
         }
@@ -92,8 +92,15 @@
             margin-bottom: 1rem;
         }
 
-        .skill {
+        /* Arrange skills horizontally */
+        .skill-pair {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 1rem;
+        }
+
+        .skill {
+            width: 48%; /* Adjust the width as needed */
         }
 
         .skill-name {
@@ -102,7 +109,7 @@
         }
 
         .progress-bar {
-            width: 100px; /* Adjust the width as needed for each skill */
+            width: 100%;
             height: 20px;
             background-color: #FF69B4; /* Pink Background for Progress Bar */
             border-radius: 10px;
@@ -112,7 +119,6 @@
 
         .progress {
             height: 100%;
-            width: 100%; /* Full width for progress bar */
             background-color: #66FF00; /* Bright Green Progress */
             text-align: right;
             line-height: 20px;
@@ -182,40 +188,47 @@
 
     <div class="skills">
         <h2>Skills</h2>
-        <div class="skill">
-            <div class="skill-name">Python</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 85%;">85%</div>
+        <!-- Arrange skills horizontally in pairs -->
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">Python</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Django</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">80%</div>
+                </div>
             </div>
         </div>
-        <div class="skill">
-            <div class="skill-name">Django</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 80%;">80%</div>
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">Django REST Framework</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">AWS</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
             </div>
         </div>
-        <div class="skill">
-            <div class="skill-name">Django REST Framework</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 100%;">100%</div>
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
             </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">AWS</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 70%;">70%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">HTML</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 100%;">100%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">CSS</div>
-            <div class="progress-bar">
-                <div class="progress" style="width: 100%;">100%</div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
             </div>
         </div>
         <!-- Add more skills here -->
