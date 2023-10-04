@@ -141,18 +141,31 @@
         }
 
         /* Typewriter effect for text */
-        .typewriter {
+        .typewriter-container {
             overflow: hidden; /* Hide overflow characters */
             white-space: nowrap; /* Prevent text from wrapping */
             letter-spacing: 2px; /* Adjust letter spacing for readability */
             animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
         }
 
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            transform: translateY(1em); /* Start with text hidden */
+            animation: type 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes type {
+            to {
+                transform: translateY(0); /* Bring text down after typing */
+            }
+        }
+
         @keyframes typing {
-            from {
+            0% {
                 width: 0;
             }
-            to {
+            100% {
                 width: 100%;
             }
         }
@@ -241,7 +254,13 @@
             </video>
         </div>
         <h1>Bright Njoku</h1>
-        <p class="typewriter">Software Developer | Python | Django | Django REST Framework | AWS</p>
+        <p class="typewriter-container">
+            <span class="typewriter">Software Developer |</span>
+            <span class="typewriter"> Python |</span>
+            <span class="typewriter"> Django |</span>
+            <span class="typewriter"> Django REST Framework |</span>
+            <span class="typewriter"> AWS</span>
+        </p>
     </header>
 
     <!-- LinkedIn Container -->
@@ -327,6 +346,5 @@
     <footer>
         &copy; 2023 Bright Njoku - Software Developer
     </footer>
-
 </body>
 </html>
