@@ -22,25 +22,6 @@
             padding: 0;
         }
 
-        /* Centered container for LinkedIn badge */
-        .linkedin-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Bring the badge down */
-            position: absolute;
-            top: 60px; /* Adjust the top value as needed */
-            right: 10px;
-            width: 100px;
-            height: 150px; /* Increased height to show the full badge */
-            z-index: 1; /* Ensure it appears above other content */
-        }
-
-        .linkedin-badge {
-            background-color: #fff; /* White Background for the badge */
-            padding: 10px;
-            border-radius: 10px;
-        }
-
         /* Header */
         header {
             background-color: #fff; /* White Header */
@@ -140,54 +121,17 @@
             transform: translateX(-50%);
         }
 
-        /* Typewriter effect for text */
-        .typewriter-container {
-            overflow: hidden; /* Hide overflow characters */
-            white-space: nowrap; /* Prevent text from wrapping */
-            letter-spacing: 2px; /* Adjust letter spacing for readability */
-            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-
-        .typewriter {
-            display: inline-block;
-            overflow: hidden;
-            transform: translateY(1em); /* Start with text hidden */
-            animation: type 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes type {
-            to {
-                transform: translateY(0); /* Bring text down after typing */
-            }
-        }
-
-        @keyframes typing {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-            from, to {
-                border-color: transparent;
-            }
-            50% {
-                border-color: #000;
-            }
-        }
-
         /* Arrange skills horizontally in pairs */
         .skill-pair {
             display: flex;
+            flex-wrap: wrap; /* Allow skills to wrap on small screens */
             justify-content: space-between;
             margin-bottom: 1rem;
         }
 
         .skill {
             width: 48%; /* Adjust the width as needed */
+            margin-bottom: 1rem; /* Add some margin between skills */
         }
 
         .skill-name {
@@ -241,9 +185,70 @@
                 transform: scale(1.1);
             }
         }
+
+        /* LinkedIn Badge Styles */
+        .linkedin-badge {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            z-index: 9999;
+        }
+
+        /* LinkedIn Badge Link Styles */
+        .linkedin-badge a {
+            text-decoration: none;
+            color: #0077B5;
+            font-weight: bold;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .about h2 {
+                font-size: 1.5rem;
+            }
+
+            .about p {
+                font-size: 1rem;
+            }
+
+            .skills h2 {
+                font-size: 1.5rem;
+            }
+
+            .skill-name {
+                font-size: 1rem;
+            }
+
+            .progress-bar {
+                height: 10px;
+            }
+
+            .progress {
+                line-height: 10px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- LinkedIn Badge -->
+    <div class="linkedin-badge">
+        <!-- LinkedIn API Badge -->
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a>
+    </div>
+
     <header>
         <!-- Rotating Globe Video -->
         <div id="globe-container">
@@ -262,15 +267,6 @@
             <span class="typewriter"> AWS</span>
         </p>
     </header>
-
-    <!-- LinkedIn Container -->
-    <div class="linkedin-container">
-        <!-- LinkedIn API Badge -->
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-        <div class="linkedin-badge LI-profile-badge" data-locale="en_US" data-size="small" data-theme="light" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a>
-        </div>
-    </div>
 
     <!-- WhatsApp Button with Icon -->
     <div class="contact-button">
