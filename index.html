@@ -28,17 +28,16 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            z-index: 1; /* Ensure it appears above other content */
         }
 
         .linkedin-badge {
             background-color: #fff; /* White Background for the badge */
-            padding: 20px;
-            text-align: center;
+            padding: 10px;
             border-radius: 10px;
         }
 
@@ -219,6 +218,15 @@
         <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
+    <!-- LinkedIn Container -->
+    <div class="linkedin-container">
+        <!-- LinkedIn API Badge -->
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <div class="linkedin-badge LI-profile-badge" data-locale="en_US" data-size="small" data-theme="light" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a>
+        </div>
+    </div>
+
     <!-- WhatsApp Button with Icon -->
     <div class="contact-button">
         <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
@@ -230,15 +238,6 @@
     <div class="about">
         <h2>About Me</h2>
         <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
-    </div>
-
-    <!-- LinkedIn Container -->
-    <div class="linkedin-container">
-        <!-- LinkedIn API Badge -->
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-        <div class="linkedin-badge LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a>
-        </div>
     </div>
 
     <!-- Skills Section -->
