@@ -140,6 +140,32 @@
             transform: translateX(-50%);
         }
 
+        /* Typewriter effect for text */
+        .typewriter {
+            overflow: hidden; /* Hide overflow characters */
+            white-space: nowrap; /* Prevent text from wrapping */
+            letter-spacing: 2px; /* Adjust letter spacing for readability */
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #000;
+            }
+        }
+
         /* Arrange skills horizontally in pairs */
         .skill-pair {
             display: flex;
@@ -210,13 +236,12 @@
         <div id="globe-container">
             <video autoplay loop muted playsinline>
                 <source src="https://pixabay.com/cs/videos/sv%C4%9Bt-zem%C4%9B-nasa-planeta-zem%C4%9Bkoule-2/" type="video/mp4">
-                <source src="https://pixabay.com/cs/videos/sv%C4%9Bt-zem%C4%9B-nasa-planeta-zem%C4%9Bkoule-2/video.webm" type="video/webm">
                 <!-- Add additional source elements for different video formats if needed -->
                 Your browser does not support the video tag.
             </video>
         </div>
         <h1>Bright Njoku</h1>
-        <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
+        <p class="typewriter">Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
     <!-- LinkedIn Container -->
@@ -302,5 +327,6 @@
     <footer>
         &copy; 2023 Bright Njoku - Software Developer
     </footer>
+
 </body>
 </html>
