@@ -159,14 +159,6 @@
             width: 70%; /* Adjust the width for the desired progress */
         }
 
-        /* Centered LinkedIn API Badge */
-        .linkedin-badge {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Adjust the height as needed */
-        }
-
         /* Centered Buy Me a Coffee Section */
         .buy-coffee {
             text-align: center;
@@ -217,23 +209,71 @@
     <!-- About Me Section -->
     <div class="about">
         <h2>About Me</h2>
-        <!-- Centered LinkedIn API Badge -->
-        <div class="linkedin-badge">
-            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a></div>
-        </div>
-              
         <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
+    </div>
+
+    <!-- LinkedIn API Badge -->
+    <div class="linkedin-badge">
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a></div>
     </div>
 
     <!-- Skills Section -->
     <div class="skills">
-        <!-- ... (your existing skills content) ... -->
+        <h2>Skills</h2>
+        <!-- Arrange skills horizontally in pairs -->
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">Python</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Django</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">80%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">Django REST Framework</div>
+                <div class="progress-bar django-rest-framework">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">AWS</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-pair">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;">100%</div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more skills here -->
     </div>
 
-    <!-- Buy Me a Coffee Section -->
+    <!-- Centered Buy Me a Coffee Section -->
     <div class="buy-coffee">
-        <!-- ... (your existing Buy Me a Coffee content) ... -->
+        <h2 style="color: #E74C3C;">Buy Me a Coffee</h2>
+        <p>If you find my work helpful, consider buying me a coffee!</p>
+        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
+            <i class="fa fa-coffee" style="font-size: 1.8rem;"></i> Buy Me a Coffee on WhatsApp
+        </a>
     </div>
 
     <footer>
