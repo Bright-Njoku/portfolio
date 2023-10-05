@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,12 +11,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Courier New', monospace; /* Use a monospace font for a code editor look */
         }
 
         body {
+            font-family: Arial, Helvetica, sans-serif;
             background-color: #fff; /* White Background */
-            color: #00FF00; /* Green Text */
+            color: #000; /* Black Text */
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -23,7 +24,8 @@
 
         /* Header */
         header {
-            background-color: #000; /* Black Header */
+            background-color: #fff; /* White Header */
+            color: #000; /* Black Text */
             text-align: center;
             padding: 2rem 0;
             position: relative;
@@ -32,10 +34,6 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            color: #fff; /* White Text */
-            background-color: #000; /* Black Background */
-            display: inline-block;
-            padding: 5px 10px;
         }
 
         header p {
@@ -51,21 +49,6 @@
             height: 100px;
         }
 
-        /* WhatsApp Button with Icon */
-        .contact-button {
-            text-align: center;
-        }
-
-        .contact-button a {
-            display: inline-block;
-            font-size: 1.2rem;
-            background-color: #128C7E; /* Original color */
-            padding: 6px 12px;
-            border-radius: 15px;
-            text-decoration: none;
-            color: #fff; /* White Text on Button */
-        }
-
         /* Introduction (About) */
         .about {
             padding: 2rem;
@@ -77,23 +60,6 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: #E74C3C; /* Red Text */
-            position: relative;
-            background-color: #fff; /* White Background */
-            display: inline-block;
-            padding: 5px 10px;
-        }
-
-        /* Stylish underline for section headings */
-        .about h2::after {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 2px;
-            background-color: #E74C3C; /* Red Underline Color */
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         .about p {
@@ -104,16 +70,13 @@
         .skills {
             padding: 2rem;
             text-align: center;
-            animation: breathe 4s infinite alternate;
+            animation: breathe 4s infinite alternate; /* Breathing Animation */
         }
 
         .skills h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            position: relative;
-            background-color: #fff; /* White Background */
-            display: inline-block;
-            padding: 5px 10px;
+            color: #E74C3C; /* Red Text */
         }
 
         /* Stylish underline for section headings */
@@ -132,14 +95,12 @@
         /* Arrange skills horizontally in pairs */
         .skill-pair {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             margin-bottom: 1rem;
         }
 
         .skill {
-            width: 48%;
-            margin-bottom: 1rem;
+            width: 48%; /* Adjust the width as needed */
         }
 
         .skill-name {
@@ -150,7 +111,7 @@
         .progress-bar {
             width: 100%;
             height: 20px;
-            background-color: #FF69B4;
+            background-color: #FF69B4; /* Pink Background for Progress Bar */
             border-radius: 10px;
             overflow: hidden;
             display: inline-block;
@@ -164,11 +125,12 @@
             color: #fff; /* White Text on Progress Bar */
         }
 
+        /* Adjust Django REST Framework progress */
         .django-rest-framework .progress {
-            width: 70%;
+            width: 60%; /* Adjust the width for the desired progress */
         }
 
-        /* Centered Buy Me a Coffee Section */
+        /* Buy Me a Coffee Section */
         .buy-coffee {
             text-align: center;
             padding: 2rem;
@@ -192,121 +154,22 @@
                 transform: scale(1.1);
             }
         }
-
-        /* Typewriter Animation */
-        .typewriter-container {
-            display: inline-block;
-            border-right: 2px solid transparent;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 8s steps(40, end), blink-caret 0.75s step-end infinite, color-change 10s infinite;
-        }
-
-        .typewriter {
-            display: inline-block;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .about h2 {
-                font-size: 1.5rem;
-            }
-
-            .about p {
-                font-size: 1rem;
-            }
-
-            .skills h2 {
-                font-size: 1.5rem;
-            }
-
-            .skill-name {
-                font-size: 1rem;
-            }
-
-            .progress-bar {
-                height: 10px;
-            }
-
-            .progress {
-                line-height: 10px;
-            }
-        }
-
-        /* Typewriter Animation Keyframes */
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink-caret {
-            from, to {
-                border-color: transparent;
-            }
-            50% {
-                border-color: #00FF00; /* Green Text */
-            }
-        }
-
-        @keyframes color-change {
-            0% {
-                color: #00FF00; /* Green Text */
-            }
-            25% {
-                color: #FF0000; /* Red Text */
-            }
-            50% {
-                color: #FFFFFF; /* White Text */
-            }
-            75% {
-                color: #FF0000; /* Red Text */
-            }
-            100% {
-                color: #00FF00; /* Green Text */
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <!-- Rotating Globe Video -->
         <div id="globe-container">
             <video autoplay loop muted playsinline>
-                <source src="https://pixabay.com/cs/videos/sv%C4%9Bt-zem%C4%9B-nasa-planeta-zem" type="video/mp4">
+                <source src="https://pixabay.com/cs/videos/sv%C4%9Bt-zem%C4%9B-nasa-planeta-zem%C4%9Bkoule-2/" type="video/mp4">
+                <!-- Add additional source elements for different video formats if needed -->
                 Your browser does not support the video tag.
             </video>
         </div>
         <h1>Bright Njoku</h1>
-        <p class="typewriter-container">
-            <span class="typewriter">Software Developer</span>
-            <span class="typewriter"> | Python</span>
-            <span class="typewriter"> | Django</span>
-            <span class="typewriter"> | Django REST Framework</span>
-            <span class="typewriter"> | AWS</span>
-        </p>
+        <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
     </header>
 
-    <!-- WhatsApp Button with Icon -->
-    <div class="contact-button">
-        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
-            <i class="fa fa-whatsapp" style="font-size: 1.8rem;"></i> Contact Me on WhatsApp
-        </a>
-    </div>
-
-    <!-- About Me Section -->
     <div class="about">
         <h2>About Me</h2>
         <p>Hello! I'm Bright Njoku, a native of Port Harcourt. I'm a passionate software developer skilled in Python, Django, Django REST Framework, and AWS. I'm dedicated to solving technical challenges and creating innovative solutions.</p>
@@ -315,69 +178,44 @@
     <!-- Skills Section -->
     <div class="skills">
         <h2>Skills</h2>
-        <!-- Arrange skills horizontally in pairs -->
         <div class="skill-pair">
             <div class="skill">
-                <div class="skill-name">Python</div>
+                <p class="skill-name">Python</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 85%;">85%</div>
+                    <div class="progress" style="width: 85%;"></div>
                 </div>
             </div>
             <div class="skill">
-                <div class="skill-name">Django</div>
+                <p class="skill-name">Django</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 80%;">80%</div>
+                    <div class="progress" style="width: 80%;"></div>
                 </div>
             </div>
         </div>
         <div class="skill-pair">
             <div class="skill">
-                <div class="skill-name">Django REST Framework</div>
+                <p class="skill-name">Django REST Framework</p>
                 <div class="progress-bar django-rest-framework">
-                    <div class="progress" style="width: 70%;">70%</div>
+                    <div class="progress" style="width: 70%;"></div>
                 </div>
             </div>
             <div class="skill">
-                <div class="skill-name">AWS</div>
+                <p class="skill-name">AWS</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 70%;">70%</div>
+                    <div class="progress" style="width: 70%;"></div>
                 </div>
             </div>
         </div>
-        <div class="skill-pair">
-            <div class="skill">
-                <div class="skill-name">HTML</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;">100%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">CSS</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;">100%</div>
-                </div>
-            </div>
-        </div>
-        <!-- Add more skills here -->
     </div>
 
-    <!-- Centered Buy Me a Coffee Section -->
+    <!-- Buy Me a Coffee Section -->
     <div class="buy-coffee">
-        <h2 style="color: #FF0000;">Buy Me a Coffee</h2>
-        <p>If you find my work helpful, consider buying me a coffee!</p>
-        <a href="https://api.whatsapp.com/send?phone=2347065573975" target="_blank">
-            <i class="fa fa-coffee" style="font-size: 1.8rem;"></i> Buy Me a Coffee on WhatsApp
-        </a>
+        <a href="https://www.buymeacoffee.com/yourlink" target="_blank" style="background-color: #FF0000; padding: 10px 20px; border-radius: 10px; color: #fff; text-decoration: none;">Buy Me a Coffee</a>
     </div>
 
-    <!-- LinkedIn Badge -->
-    <div style="text-align: center;">
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a></div>
-    </div>
-
+    <!-- Footer Section -->
     <footer>
-        &copy; 2023 Bright Njoku - Software Developer
+        <p>&copy; 2023 Bright Njoku. All Rights Reserved.</p>
     </footer>
 
 </body>
