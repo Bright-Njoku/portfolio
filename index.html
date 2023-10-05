@@ -186,23 +186,19 @@
             }
         }
 
-        /* LinkedIn Badge Styles */
-        .linkedin-badge {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 0;
-            z-index: 9999;
+        /* Typewriter Animation */
+        .typewriter-container {
+            display: inline-block;
+            color: transparent;
+            border-right: 2px solid transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite, color-change 6s infinite;
         }
 
-        /* LinkedIn Badge Link Styles */
-        .linkedin-badge a {
-            text-decoration: none;
-            color: #0077B5;
-            font-weight: bold;
+        .typewriter {
+            display: inline-block;
+            color: #00FF00; /* Green Text */
         }
 
         /* Mobile Styles */
@@ -239,21 +235,52 @@
                 line-height: 10px;
             }
         }
+
+        /* Typewriter Animation Keyframes */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #00FF00; /* Green Text */
+            }
+        }
+
+        @keyframes color-change {
+            0% {
+                color: #00FF00; /* Green Text */
+            }
+            25% {
+                color: #FF0000; /* Red Text */
+            }
+            50% {
+                color: #0000FF; /* Blue Text */
+            }
+            75% {
+                color: #FFFF00; /* Yellow Text */
+            }
+            100% {
+                color: #00FF00; /* Green Text */
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- LinkedIn Badge -->
-    <div class="linkedin-badge">
-        <!-- LinkedIn API Badge -->
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-        <a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a>
-    </div>
-
+    <!-- Header -->
     <header>
         <!-- Rotating Globe Video -->
         <div id="globe-container">
             <video autoplay loop muted playsinline>
-                <source src="https://pixabay.com/cs/videos/sv%C4%9Bt-zem%C4%9B-nasa-planeta-zem%C4%9Bkoule-2/" type="video/mp4">
+                <source src="https://pixabay.com/cs/videos/sv%C4%9Bt-zem%C4%9B-nasa-planeta-zem" type="video/mp4">
                 <!-- Add additional source elements for different video formats if needed -->
                 Your browser does not support the video tag.
             </video>
@@ -339,8 +366,15 @@
         </a>
     </div>
 
+    <!-- LinkedIn Badge -->
+    <div style="text-align: center;">
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="brightnjoku" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/brightnjoku?trk=profile-badge">Bright Njoku</a></div>
+    </div>
+
     <footer>
         &copy; 2023 Bright Njoku - Software Developer
     </footer>
+
 </body>
 </html>
