@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Njoku - Software Developer</title>
+    <title>Bright Njoku - Code Editor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/font-awesome.min.css">
     <style>
         /* Reset some default styles */
@@ -173,12 +173,23 @@
 
         /* WhatsApp button */
         .whatsapp-button {
-            background-color: #44cc00; /* WhatsApp Green */
+            background-color: #39AC73; /* Light Green Color */
             color: #fff; /* White Text */
             text-decoration: none;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
+            margin: 20px auto; /* Center the button */
+        }
+
+        /* Typing animation */
+        .typing-animation {
+            overflow: hidden; /* Hide overflow */
+            border-right: .15em solid orange; /* Typing cursor */
+            white-space: nowrap; /* Keep text in one line */
+            margin: 0 auto; /* Center the element */
+            letter-spacing: .15em; /* Speed of typing */
+            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
         }
 
         /* Keyframe animations */
@@ -200,29 +211,12 @@
             }
         }
 
-        /* Typing animation */
-        .typing-animation-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .typing-animation {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.5rem;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 0.15em solid orange; /* Typing cursor */
-            animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-
-        /* Keyframe animations for typing */
         @keyframes typing {
             from {
                 width: 0;
             }
             to {
-                width: 100%;
+                width: auto;
             }
         }
 
@@ -249,9 +243,14 @@
         </div>
         <h1>Bright Njoku</h1>
         <p>
-            <a href="https://wa.me/1234567890" class="whatsapp-button">Whatsapp Chat</a>
+            <span class="typing-animation"> Python|</span>
+            <span class="typing-animation"> Django|</span>
+            <span class="typing-animation"> Django REST Framework|</span>
+            <span class="typing-animation"> AWS</span>
         </p>
     </header>
+
+    <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER_HERE" class="whatsapp-button" target="_blank">WhatsApp Chat</a>
 
     <div class="about">
         <h2>About Me</h2>
@@ -260,21 +259,48 @@
 Meet Bright Njoku, the software sorcerer! 🧙‍♂️👨‍💻 a native of Port Harcourt.
 With a keyboard as my wand and lines of code as spells, I am on a quest to make the digital world a better and more magical place.
 
-Whether it's turning caffeine into code or debugging like a detective, Bright Njoku is a wizard of all things software and my strength is in <span class="typing-animation">Code Editor</span>, <span class="typing-animation" style="color: #E74C3C;">Python</span>, <span class="typing-animation" style="color: #FFCC00;">Django</span>, <span class="typing-animation" style="color: #66FF00;">Django REST Framework</span>, <span class="typing-animation" style="color: #FF69B4;">AWS</span>.
+Whether it's turning caffeine into code or debugging like a detective, Bright Njoku is a wizard of all things software and my strength is in PYTHON, DJANGO REST FRAMEWORK, & AWS.
 
 I am the wizard behind your screen, turning lines of codes into digital magic. When I am not debugging the mysteries of the tech world, you can find me sipping on coffee and brainstorming ingenious solutions.
 
 If I'm feeling adventurous, I turn bugs into features🐞😆.
 
 It's a wild ride in the world of software development where I keep coding my dreams into REALITY!!💫🚀💻
-            <br>
-            I am Bright Njoku, and You are <b>WELCOME</b> to my world!!
-        </p>
+            <br></p>I am Bright Njoku, and You are <b>WELCOME</b> to my world!!.</p>
     </div>
 
     <!-- Skills Section -->
     <div class="skills">
         <h2>Skills</h2>
+        <div class="skill-pair">
+            <div class="skill">
+                <p class="skill-name">Python</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p class="skill-name">Django</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-pair">
+            <div class="skill">
+                <p class="skill-name">Django REST Framework</p>
+                <div class="progress-bar django-rest-framework">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p class="skill-name">AWS</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- HTML and CSS Progress Bars -->
         <div class="skill-pair">
             <div class="skill">
                 <p class="skill-name">HTML</p>
@@ -284,20 +310,6 @@ It's a wild ride in the world of software development where I keep coding my dre
             </div>
             <div class="skill">
                 <p class="skill-name">CSS</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="skill-pair">
-            <div class="skill">
-                <p class="skill-name">JavaScript</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <p class="skill-name">React</p>
                 <div class="progress-bar">
                     <div class="progress" style="width: 100%;"></div>
                 </div>
@@ -315,5 +327,25 @@ It's a wild ride in the world of software development where I keep coding my dre
         <p>&copy; 2023 Bright Njoku. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        // JavaScript for the typing animation
+        const typingElements = document.querySelectorAll('.typing-animation');
+
+        typingElements.forEach((element) => {
+            const text = element.textContent;
+            element.textContent = '';
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < text.length) {
+                    element.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
+                }
+            }
+
+            type();
+        });
+    </script>
 </body>
 </html>
