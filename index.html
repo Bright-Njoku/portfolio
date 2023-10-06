@@ -185,22 +185,20 @@
             margin: 0 auto; /* Center the button horizontally */
         }
 
-        /* Keyframe animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        /* Typing animation for skills */
+        .typing-animation {
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(20, end) 1s forwards;
         }
 
-        @keyframes breathe {
-            0%, 100% {
-                transform: scale(1);
+        @keyframes typing {
+            from {
+                width: 0;
             }
-            50% {
-                transform: scale(1.1);
+            to {
+                width: 100%;
             }
         }
     </style>
@@ -216,7 +214,13 @@
             </video>
         </div>
         <h1>Bright Njoku</h1>
-        <p>Code Editor | Python | Django | Django REST Framework | AWS</p>
+        <p>
+            <span class="typing-animation">Code Editor</span>
+            <span class="typing-animation"> Python</span>
+            <span class="typing-animation"> Django</span>
+            <span class="typing-animation"> Django REST Framework</span>
+            <span class="typing-animation"> AWS</span>
+        </p>
     </header>
 
     <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER_HERE" class="whatsapp-button" target="_blank">WhatsApp Chat</a>
