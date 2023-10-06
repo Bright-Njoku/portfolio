@@ -173,33 +173,23 @@
 
         /* WhatsApp button */
         .whatsapp-button {
-            background-color: #215C54; /* Hex #215C54 Color */
+            background-color: #39AC73; /* Light Green Color */
             color: #fff; /* White Text */
-            padding: 10px 20px;
-            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem; /* Reduced font size */
-            display: block;
-            width: fit-content; /* Adjust width to fit the text */
-            margin: 0 auto; /* Center the button horizontally */
-            text-align: center; /* Center the text inside the button */
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px auto; /* Center the button */
         }
 
-        /* Typing animation for skills */
+        /* Typing animation */
         .typing-animation {
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 5s steps(28, end) 1s forwards;
-        }
-
-        @keyframes typing {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: auto;
-            }
+            overflow: hidden; /* Hide overflow */
+            border-right: .15em solid orange; /* Typing cursor */
+            white-space: nowrap; /* Keep text in one line */
+            margin: 0 auto; /* Center the element */
+            letter-spacing: .15em; /* Speed of typing */
+            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
         }
 
         /* Keyframe animations */
@@ -218,6 +208,25 @@
             }
             50% {
                 transform: scale(1.1);
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: auto;
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: orange;
             }
         }
     </style>
@@ -318,5 +327,25 @@ It's a wild ride in the world of software development where I keep coding my dre
         <p>&copy; 2023 Bright Njoku. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        // JavaScript for the typing animation
+        const typingElements = document.querySelectorAll('.typing-animation');
+
+        typingElements.forEach((element) => {
+            const text = element.textContent;
+            element.textContent = '';
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < text.length) {
+                    element.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
+                }
+            }
+
+            type();
+        });
+    </script>
 </body>
 </html>
