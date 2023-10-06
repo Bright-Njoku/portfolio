@@ -20,6 +20,18 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow content */
+            animation: typing 4s steps(40) forwards; /* Typing animation */
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
         }
 
         /* Header */
