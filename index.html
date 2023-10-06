@@ -183,22 +183,41 @@
             display: block;
             width: fit-content; /* Adjust width to fit the text */
             margin: 0 auto; /* Center the button horizontally */
+            text-align: center; /* Center the text inside the button */
         }
 
         /* Typing animation for skills */
         .typing-animation {
-            width: 0;
-            white-space: nowrap;
             overflow: hidden;
-            animation: typing 4s steps(20, end) 1s forwards;
+            white-space: nowrap;
+            animation: typing 5s steps(28, end) 1s forwards;
         }
 
         @keyframes typing {
-            from {
+            0% {
                 width: 0;
             }
+            100% {
+                width: auto;
+            }
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
             to {
-                width: 100%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
             }
         }
     </style>
@@ -215,9 +234,9 @@
         </div>
         <h1>Bright Njoku</h1>
         <p>
-            <span class="typing-animation"> Python|</span>
-            <span class="typing-animation"> Django|</span>
-            <span class="typing-animation"> Django REST Framework|</span>
+            <span class="typing-animation"> Python</span>
+            <span class="typing-animation"> Django</span>
+            <span class="typing-animation"> Django REST Framework</span>
             <span class="typing-animation"> AWS</span>
         </p>
     </header>
