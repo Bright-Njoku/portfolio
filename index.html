@@ -179,53 +179,29 @@
             border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1rem; /* Reduced font size */
             display: block;
-            margin: 0 auto; /* Center the button */
+            width: fit-content; /* Adjust width to fit the text */
+            margin: 0 auto; /* Center the button horizontally */
         }
 
-        /* Text Typing Animation */
-        .typing-animation {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            margin-bottom: 0.2rem;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .typing-animation span {
-            animation: typing 2s steps(40, end) infinite;
-        }
-
-        @keyframes typing {
+        /* Keyframe animations */
+        @keyframes fadeIn {
             from {
-                width: 0;
+                opacity: 0;
             }
             to {
-                width: 100%;
+                opacity: 1;
             }
         }
 
-        /* Different colors for each text piece */
-        .text-piece-1 {
-            color: #FF5733; /* Orange */
-        }
-
-        .text-piece-2 {
-            color: #3498DB; /* Blue */
-        }
-
-        .text-piece-3 {
-            color: #E74C3C; /* Red */
-        }
-
-        .text-piece-4 {
-            color: #27AE60; /* Green */
-        }
-
-        .text-piece-5 {
-            color: #8E44AD; /* Purple */
+        @keyframes breathe {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
     </style>
 </head>
@@ -240,13 +216,7 @@
             </video>
         </div>
         <h1>Bright Njoku</h1>
-        <p class="typing-animation">
-            <span class="text-piece-1">Code Editor</span>
-            <span class="text-piece-2"> Python</span>
-            <span class="text-piece-3"> Django</span>
-            <span class="text-piece-4"> Django REST Framework</span>
-            <span class="text-piece-5"> AWS</span>
-        </p>
+        <p>Code Editor | Python | Django | Django REST Framework | AWS</p>
     </header>
 
     <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER_HERE" class="whatsapp-button" target="_blank">WhatsApp Chat</a>
@@ -264,7 +234,7 @@ I am the wizard behind your screen, turning lines of codes into digital magic. W
 
 If I'm feeling adventurous, I turn bugs into features🐞😆.
 
-It's a wild ride in the world of software development where i keep coding my dreams into REALITY!!💫🚀💻
+It's a wild ride in the world of software development where I keep coding my dreams into REALITY!!💫🚀💻
             <br></p>I am Bright Njoku, and You are <b>WELCOME</b> to my world!!.</p>
     </div>
 
@@ -275,13 +245,13 @@ It's a wild ride in the world of software development where i keep coding my dre
             <div class="skill">
                 <p class="skill-name">Python</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
+                    <div class="progress" style="width: 85%;"></div>
                 </div>
             </div>
             <div class="skill">
                 <p class="skill-name">Django</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
+                    <div class="progress" style="width: 80%;"></div>
                 </div>
             </div>
         </div>
@@ -289,13 +259,13 @@ It's a wild ride in the world of software development where i keep coding my dre
             <div class="skill">
                 <p class="skill-name">Django REST Framework</p>
                 <div class="progress-bar django-rest-framework">
-                    <div class="progress" style="width: 100%;"></div>
+                    <div class="progress" style="width: 90%;"></div>
                 </div>
             </div>
             <div class="skill">
                 <p class="skill-name">AWS</p>
                 <div class="progress-bar">
-                    <div class="progress" style="width: 100%;"></div>
+                    <div class="progress" style="width: 70%;"></div>
                 </div>
             </div>
         </div>
