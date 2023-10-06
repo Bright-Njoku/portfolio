@@ -154,32 +154,18 @@
             width: 60%; /* Adjust the width for the desired progress */
         }
 
-        /* Buy Me a Coffee Section */
-        .buy-coffee {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Style the "Buy Me a Coffee" button */
-        .buy-coffee a {
-            background-color: #FFCC00; /* Dark Yellow Background */
-            padding: 10px 20px;
-            border-radius: 10px;
-            color: #000; /* Black Text */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
         /* WhatsApp button */
         .whatsapp-button {
-            background-color: #39AC73; /* Light Green Color */
+            background-color: #128c7e; /* Updated background color to #128c7e */
             color: #fff; /* White Text */
             text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block; /* Center the button using block-level element */
             margin: 20px auto; /* Center the button */
+            width: fit-content; /* Set button width to fit content */
         }
 
         /* Typing animation */
@@ -190,6 +176,23 @@
             margin: 0 auto; /* Center the element */
             letter-spacing: .15em; /* Speed of typing */
             animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        /* Different colors for each word */
+        .python {
+            color: green;
+        }
+
+        .django {
+            color: red;
+        }
+
+        .rest-framework {
+            color: blue;
+        }
+
+        .aws {
+            color: grey;
         }
 
         /* Keyframe animations */
@@ -243,10 +246,10 @@
         </div>
         <h1>Bright Njoku</h1>
         <p>
-            <span class="typing-animation"> Python|</span>
-            <span class="typing-animation"> Django|</span>
-            <span class="typing-animation"> Django REST Framework|</span>
-            <span class="typing-animation"> AWS</span>
+            <span class="typing-animation python">Python|</span>
+            <span class="typing-animation django">Django|</span>
+            <span class="typing-animation rest-framework">Django REST Framework|</span>
+            <span class="typing-animation aws">AWS</span>
         </p>
     </header>
 
@@ -338,7 +341,32 @@ It's a wild ride in the world of software development where I keep coding my dre
 
             function type() {
                 if (charIndex < text.length) {
-                    element.textContent += text.charAt(charIndex);
+                    const char = text.charAt(charIndex);
+                    let colorClass = '';
+
+                    // Assign different colors to each word
+                    switch (char) {
+                        case 'P':
+                            colorClass = 'python';
+                            break;
+                        case 'D':
+                            colorClass = 'django';
+                            break;
+                        case 'R':
+                            colorClass = 'rest-framework';
+                            break;
+                        case 'A':
+                            colorClass = 'aws';
+                            break;
+                        default:
+                            colorClass = '';
+                    }
+
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    span.className = colorClass;
+
+                    element.appendChild(span);
                     charIndex++;
                     setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
                 }
