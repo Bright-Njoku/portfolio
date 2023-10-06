@@ -14,9 +14,9 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #fff; /* White Background */
-            color: #000; /* Black Text */
+            font-family: 'Courier New', monospace;
+            background-color: #282c35; /* Dark Background */
+            color: #fff; /* White Text */
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -24,8 +24,8 @@
 
         /* Header */
         header {
-            background-color: #fff; /* White Header */
-            color: #000; /* Black Text */
+            background-color: #333; /* Dark Header */
+            color: #fff; /* White Text */
             text-align: center;
             padding: 2rem 0;
             position: relative;
@@ -52,15 +52,15 @@
         /* Introduction (About) */
         .about {
             padding: 2rem;
-            text-align: center;
+            text-align: left; /* Text moves from left to right */
             animation: fadeIn 2s ease;
         }
 
         .about h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #E74C3C; /* Red Text */
-            position: relative; /* Add this line */
+            color: #6bc0e5; /* Code Editor-like Color */
+            position: relative;
         }
 
         /* Stylish underline for section headings */
@@ -70,7 +70,7 @@
             display: block;
             width: 100%;
             height: 2px;
-            background-color: #FFCC00; /* Dark Yellow Underline */
+            background-color: #6bc0e5; /* Code Editor-like Color */
             position: absolute;
             bottom: -5px;
             left: 0;
@@ -85,7 +85,7 @@
             display: block;
             width: 100%;
             height: 2px;
-            background-color: #FFCC00; /* Dark Yellow Underline */
+            background-color: #6bc0e5; /* Code Editor-like Color */
             position: absolute;
             bottom: -5px;
             left: 0;
@@ -105,15 +105,15 @@
         /* Skills Section */
         .skills {
             padding: 2rem;
-            text-align: center;
+            text-align: left; /* Text moves from left to right */
             animation: breathe 4s infinite alternate; /* Breathing Animation */
         }
 
         .skills h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: #E74C3C; /* Red Text */
-            position: relative; /* Add this line */
+            color: #6bc0e5; /* Code Editor-like Color */
+            position: relative;
         }
 
         /* Arrange skills horizontally in pairs */
@@ -135,7 +135,7 @@
         .progress-bar {
             width: 100%;
             height: 20px;
-            background-color: #FF69B4; /* Pink Background for Progress Bar */
+            background-color: #6bc0e5; /* Code Editor-like Color */
             border-radius: 10px;
             overflow: hidden;
             display: inline-block;
@@ -143,10 +143,10 @@
 
         .progress {
             height: 100%;
-            background-color: #66FF00; /* Bright Green Progress */
+            background-color: #00ffcc; /* Brighter Color for Progress Bar */
             text-align: right;
             line-height: 20px;
-            color: #fff; /* White Text on Progress Bar */
+            color: #333; /* Dark Text on Progress Bar */
         }
 
         /* Adjust Django REST Framework progress */
@@ -163,7 +163,6 @@
             border-radius: 10px;
             font-weight: bold;
             font-size: 1.2rem;
-            display: block; /* Center the button using block-level element */
             margin: 20px auto; /* Center the button */
             width: fit-content; /* Set button width to fit content */
         }
@@ -171,28 +170,11 @@
         /* Typing animation */
         .typing-animation {
             overflow: hidden; /* Hide overflow */
-            border-right: .15em solid orange; /* Typing cursor */
             white-space: nowrap; /* Keep text in one line */
             margin: 0 auto; /* Center the element */
-            letter-spacing: .15em; /* Speed of typing */
-            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        /* Different colors for each word */
-        .python {
-            color: green;
-        }
-
-        .django {
-            color: red;
-        }
-
-        .rest-framework {
-            color: blue;
-        }
-
-        .aws {
-            color: grey;
+            font-size: 1.2rem; /* Code Editor-like Font Size */
+            color: #00ffcc; /* Brighter Color for Text */
+            animation: typing 2s linear; /* Linear typing effect */
         }
 
         /* Keyframe animations */
@@ -219,17 +201,7 @@
                 width: 0;
             }
             to {
-                width: auto;
-            }
-        }
-
-        @keyframes blink-caret {
-            from,
-            to {
-                border-color: transparent;
-            }
-            50% {
-                border-color: orange;
+                width: 100%;
             }
         }
     </style>
@@ -246,14 +218,14 @@
         </div>
         <h1>Bright Njoku</h1>
         <p>
-            <span class="typing-animation python">Python|</span>
-            <span class="typing-animation django">Django|</span>
-            <span class="typing-animation rest-framework">Django REST Framework|</span>
-            <span class="typing-animation aws">AWS</span>
+            <span class="typing-animation">Python| Django| Django REST Framework| AWS</span>
         </p>
     </header>
 
-    <a href="https://api.whatsapp.com/send?phone=2347065573975" class="whatsapp-button" target="_blank">WhatsApp Chat</a>
+    <!-- Buy Me a Coffee Section -->
+    <div class="buy-coffee">
+        <a href="https://www.buymeacoffee.com/brightnjoku" target="_blank">Buy Me a Coffee</a>
+    </div>
 
     <div class="about">
         <h2>About Me</h2>
@@ -320,11 +292,6 @@ It's a wild ride in the world of software development where I keep coding my dre
         </div>
     </div>
 
-    <!-- Buy Me a Coffee Section -->
-    <div class="buy-coffee">
-        <a href="https://www.buymeacoffee.com/brightnjoku" target="_blank">Buy Me a Coffee</a>
-    </div>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2023 Bright Njoku. All Rights Reserved.</p>
@@ -332,48 +299,22 @@ It's a wild ride in the world of software development where I keep coding my dre
 
     <script>
         // JavaScript for the typing animation
-        const typingElements = document.querySelectorAll('.typing-animation');
+        const typingElement = document.querySelector('.typing-animation');
 
-        typingElements.forEach((element) => {
-            const text = element.textContent;
-            element.textContent = '';
-            let charIndex = 0;
+        const text = typingElement.textContent;
+        typingElement.textContent = '';
+        let charIndex = 0;
 
-            function type() {
-                if (charIndex < text.length) {
-                    const char = text.charAt(charIndex);
-                    let colorClass = '';
-
-                    // Assign different colors to each word
-                    switch (char) {
-                        case 'P':
-                            colorClass = 'python';
-                            break;
-                        case 'D':
-                            colorClass = 'django';
-                            break;
-                        case 'R':
-                            colorClass = 'rest-framework';
-                            break;
-                        case 'A':
-                            colorClass = 'aws';
-                            break;
-                        default:
-                            colorClass = '';
-                    }
-
-                    const span = document.createElement('span');
-                    span.textContent = char;
-                    span.className = colorClass;
-
-                    element.appendChild(span);
-                    charIndex++;
-                    setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
-                }
+        function type() {
+            if (charIndex < text.length) {
+                const char = text.charAt(charIndex);
+                typingElement.innerHTML += char;
+                charIndex++;
+                setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
             }
+        }
 
-            type();
-        });
+        type();
     </script>
 </body>
 </html>
