@@ -81,7 +81,8 @@
         }
 
         /* Stylish underline for section headings */
-        .skills h2::after {
+        .skills h2::after,
+        .about h2::after {
             content: "";
             display: block;
             width: 0; /* Initially, set the width to 0 */
@@ -93,9 +94,28 @@
             transition: width 0.5s ease; /* Add a transition for smooth animation */
         }
 
-        /* Hover effect for the underline */
-        .skills h2:hover::after {
-            width: 100%; /* Expand the width to 100% on hover */
+        /* Animation for the underline */
+        .skills h2::before,
+        .about h2::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: transparent; /* Transparent Underline */
+            position: absolute;
+            bottom: -5px;
+            left: 0; /* Start from the left edge */
+            animation: drawLine 0.5s ease; /* Animation to draw the line */
+        }
+
+        /* Keyframes for drawing the underline */
+        @keyframes drawLine {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
         }
 
         /* Arrange skills horizontally in pairs */
@@ -140,6 +160,17 @@
         .buy-coffee {
             text-align: center;
             padding: 2rem;
+        }
+
+        /* Style the "Buy Me a Coffee" button */
+        .buy-coffee a {
+            background-color: #FFFF00; /* Yellow Background */
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #000; /* Black Text */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         /* Keyframe animations */
@@ -216,7 +247,7 @@
 
     <!-- Buy Me a Coffee Section -->
     <div class="buy-coffee">
-        <a href="https://www.buymeacoffee.com/brightnjoku" target="_blank" style="background-color: #FF0000; padding: 10px 20px; border-radius: 10px; color: #fff; text-decoration: none;">Buy Me a Coffee</a>
+        <a href="https://www.buymeacoffee.com/brightnjoku" target="_blank">Buy Me a Coffee</a>
     </div>
 
     <!-- Footer Section -->
