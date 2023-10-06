@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Njoku - Software Developer</title>
+    <title>Bright Njoku - Code Editor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/font-awesome.min.css">
     <style>
         /* Reset some default styles */
@@ -180,25 +180,52 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1rem;
+            display: block;
+            margin: 0 auto; /* Center the button */
         }
 
-        /* Keyframe animations */
-        @keyframes fadeIn {
+        /* Text Typing Animation */
+        .typing-animation {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 0.2rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .typing-animation span {
+            animation: typing 2s steps(40, end) infinite;
+        }
+
+        @keyframes typing {
             from {
-                opacity: 0;
+                width: 0;
             }
             to {
-                opacity: 1;
+                width: 100%;
             }
         }
 
-        @keyframes breathe {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
+        /* Different colors for each text piece */
+        .text-piece-1 {
+            color: #FF5733; /* Orange */
+        }
+
+        .text-piece-2 {
+            color: #3498DB; /* Blue */
+        }
+
+        .text-piece-3 {
+            color: #E74C3C; /* Red */
+        }
+
+        .text-piece-4 {
+            color: #27AE60; /* Green */
+        }
+
+        .text-piece-5 {
+            color: #8E44AD; /* Purple */
         }
     </style>
 </head>
@@ -213,10 +240,16 @@
             </video>
         </div>
         <h1>Bright Njoku</h1>
-        <p>Software Developer | Python | Django | Django REST Framework | AWS</p>
+        <p class="typing-animation">
+            <span class="text-piece-1">Code Editor</span>
+            <span class="text-piece-2"> Python</span>
+            <span class="text-piece-3"> Django</span>
+            <span class="text-piece-4"> Django REST Framework</span>
+            <span class="text-piece-5"> AWS</span>
+        </p>
     </header>
 
-    <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=2347065573975">WhatsApp</a>
+    <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER_HERE" class="whatsapp-button" target="_blank">WhatsApp Chat</a>
 
     <div class="about">
         <h2>About Me</h2>
