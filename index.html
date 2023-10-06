@@ -77,19 +77,25 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: #E74C3C; /* Red Text */
+            position: relative; /* Add this line */
         }
 
         /* Stylish underline for section headings */
         .skills h2::after {
             content: "";
             display: block;
-            width: 30px;
+            width: 0; /* Initially, set the width to 0 */
             height: 2px;
             background-color: #66FF00; /* Green Underline Color */
             position: absolute;
             bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0; /* Start from the left edge */
+            transition: width 0.5s ease; /* Add a transition for smooth animation */
+        }
+
+        /* Hover effect for the underline */
+        .skills h2:hover::after {
+            width: 100%; /* Expand the width to 100% on hover */
         }
 
         /* Arrange skills horizontally in pairs */
